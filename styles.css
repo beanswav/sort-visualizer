@@ -1,0 +1,67 @@
+body {
+  background-color: white;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+.head {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  border-radius: 19px;
+  font-weight: bolder;
+}
+
+.data-container {
+  width: 75vw;
+  height: 100vh;
+  margin-left: 310px;
+  align-items: flex-end;
+  display: flex;
+  position: absolute;
+}
+
+.bar {
+  background-color: rgb(0, 183, 255);
+  font-family: sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.button1 {
+  padding: 12px;
+  font-weight: bolder;
+  background-color: grey;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  border: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav button {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  display: block;
+}
+
+.slider {
+  display: block;
+}
