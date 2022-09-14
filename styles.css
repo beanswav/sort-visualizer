@@ -1,7 +1,8 @@
 body {
   background-color: white;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   height: 100%;
   overflow: hidden;
 }
@@ -18,7 +19,7 @@ body {
 .data-container {
   width: 75vw;
   height: 100vh;
-  margin-left: 310px;
+  margin-left: 200px;
   align-items: flex-end;
   display: flex;
   position: absolute;
@@ -56,12 +57,63 @@ body {
   padding-top: 60px;
 }
 
-.sidenav button {
-  padding: 8px 8px 8px 32px;
-  font-size: 25px;
-  display: block;
+.wrapper {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 8vh;
+}
+
+.newArray {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-select {
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 90%;
+}
+
+.startSort {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bottomWrapper {
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.sidenav span {
+  margin-left: 1rem;
+  margin-top: 1vh;
 }
 
 .slider {
   display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 1vh;
+}
+
+.start-button-wrapper {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 4vh;
 }

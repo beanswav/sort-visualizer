@@ -88,6 +88,9 @@ async function merge(ele, low, mid, high) {
 }
 
 async function mergeSort(ele, l, r) {
+  // let ele = document.querySelectorAll(".bar");
+  // let l = 0;
+  // let r = parseInt(ele.length) - 1;
   console.log("In mergeSort()");
   if (l >= r) {
     console.log(`return cause just 1 elemment l=${l}, r=${r}`);
@@ -100,16 +103,14 @@ async function mergeSort(ele, l, r) {
   await merge(ele, l, m, r);
 }
 
-const mergeSortBtn = document.querySelector(".mergeSort");
-mergeSortBtn.addEventListener("click", async function () {
-  let ele = document.querySelectorAll(".bar");
-  let l = 0;
-  let r = parseInt(ele.length) - 1;
-  disableSizeSlider();
-  disableSortingBtn();
-  disableNewArray();
-  await mergeSort(ele, l, r);
-  enableSortingBtn();
-  enableSizeSlider();
-  enableNewArray();
-});
+// const mergeSortBtn = document.querySelector(".mergeSort");
+// mergeSortBtn.addEventListener("click", async function () {
+
+//   disableSizeSlider();
+//   disableSortingBtn();
+//   disableNewArray();
+//   await mergeSort(ele, l, r);
+//   enableSortingBtn();
+//   enableSizeSlider();
+//   enableNewArray();
+// });

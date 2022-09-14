@@ -1,4 +1,5 @@
-async function bubbleSort(arr) {
+async function bubbleSort() {
+  let arr = document.querySelectorAll(".bar");
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - i - 1; j++) {
       arr[j].style.backgroundColor = "orange";
@@ -23,15 +24,3 @@ async function bubbleSort(arr) {
   }
   arr[0].style.backgroundColor = "green";
 }
-
-const bubbleSortBtn = document.querySelector(".bubbleSort");
-bubbleSortBtn.addEventListener("click", async function () {
-  let arr = document.querySelectorAll(".bar");
-  disableSizeSlider();
-  disableSortingBtn();
-  disableNewArray();
-  await bubbleSort(arr);
-  enableSortingBtn();
-  enableSizeSlider();
-  enableNewArray();
-});

@@ -1,13 +1,37 @@
+let SELECTION = "";
 const arraySize = document.querySelector("#array_size");
+const sortSelect = document.querySelector(".form-select");
+const startBtn = document.querySelector(".startSort");
+
+sortSelect.addEventListener("change", function (e) {
+  SELECTION = e.target.value;
+});
+
+startBtn.addEventListener("click", function () {
+  switch (SELECTION) {
+    case "selectionSort":
+      selectionSort();
+      break;
+    case "mergeSort":
+      mergeSort();
+      break;
+    case "bubbleSort":
+      bubbleSort();
+      break;
+    case "insertionSort":
+      insertionSort();
+      break;
+    default:
+      return;
+  }
+});
 
 function disableSortingBtn() {
-  document.querySelector(".selectionSort").disabled = true;
-  document.querySelector(".mergeSort").disabled = true;
+  sortSelect.disabled = true;
 }
 
 function enableSortingBtn() {
-  document.querySelector(".selectionSort").disabled = false;
-  document.querySelector(".mergeSort").disabled = false;
+  sortSelect.disabled = false;
 }
 
 function disableSizeSlider() {
@@ -19,15 +43,14 @@ function enableSizeSlider() {
 }
 
 function disableNewArray() {
-  document.querySelector(".button1").disabled = true;
+  document.querySelector(".newArray").disabled = true;
 }
 
 function enableNewArray() {
-  document.querySelector(".button1").disabled = false;
+  document.querySelector(".newArray").disabled = false;
 }
 
 arraySize.addEventListener("input", function () {
-  console.log(arraySize.value, typeof arraySize.value);
   generateArr(parseInt(arraySize.value));
 });
 
@@ -41,7 +64,7 @@ function sortDelay(time) {
 
 const container = document.querySelector(".data-container");
 
-generateArr();
+generateArr(arraySize.value);
 
 let delay = 260;
 
@@ -51,7 +74,13 @@ delayTime.addEventListener("input", function () {
   delay = 320 - parseInt(delayTime.value);
 });
 
-function generateArr(size = 10) {
+let newArray = document.querySelector("#new_array");
+
+newArray.addEventListener("click", function () {
+  generateArr(parseInt(arraySize.value));
+});
+
+function generateArr(size) {
   container.innerHTML = "";
   for (let i = 0; i < size; i++) {
     const numWidth = Math.floor(document.body.clientWidth / (size * 3));
