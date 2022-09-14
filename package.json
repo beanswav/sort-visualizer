@@ -1,7 +1,7 @@
 {
   "name": "sorting",
   "version": "1.0.0",
-  "homepage": "https://beanswav.github.io/sorting-visualizer",
+  "homepage": "https://beanswav.github.io/sort-visualizer",
   "description": "",
   "main": "app.js",
   "scripts": {
