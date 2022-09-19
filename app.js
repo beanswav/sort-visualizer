@@ -7,19 +7,23 @@ sortSelect.addEventListener("change", function (e) {
   SELECTION = e.target.value;
 });
 
-startBtn.addEventListener("click", function () {
+startBtn.addEventListener("click", async function () {
+  let ele = document.querySelectorAll(".bar");
+  let l = 0;
+  let r = parseInt(ele.length) - 1;
+  console.log(ele);
   switch (SELECTION) {
     case "selectionSort":
-      selectionSort();
+      await selectionSort();
       break;
     case "mergeSort":
-      mergeSort();
+      await mergeSort(ele, l, r);
       break;
     case "bubbleSort":
-      bubbleSort();
+      await bubbleSort();
       break;
     case "insertionSort":
-      insertionSort();
+      await insertionSort();
       break;
     default:
       return;
