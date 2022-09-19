@@ -11,19 +11,51 @@ startBtn.addEventListener("click", async function () {
   let ele = document.querySelectorAll(".bar");
   let l = 0;
   let r = parseInt(ele.length) - 1;
-  console.log(ele);
   switch (SELECTION) {
     case "selectionSort":
+      disableSizeSlider();
+      disableSortingBtn();
+      disableNewArray();
       await selectionSort();
+      enableSizeSlider();
+      enableSortingBtn();
+      enableNewArray();
       break;
     case "mergeSort":
+      disableSizeSlider();
+      disableSortingBtn();
+      disableNewArray();
       await mergeSort(ele, l, r);
+      enableSizeSlider();
+      enableSortingBtn();
+      enableNewArray();
       break;
     case "bubbleSort":
+      disableSizeSlider();
+      disableSortingBtn();
+      disableNewArray();
       await bubbleSort();
+      enableSizeSlider();
+      enableSortingBtn();
+      enableNewArray();
       break;
     case "insertionSort":
+      disableSizeSlider();
+      disableSortingBtn();
+      disableNewArray();
       await insertionSort();
+      enableSizeSlider();
+      enableSortingBtn();
+      enableNewArray();
+      break;
+    case "quickSort":
+      disableSizeSlider();
+      disableSortingBtn();
+      disableNewArray();
+      await quickSort(ele, l, r);
+      enableSizeSlider();
+      enableSortingBtn();
+      enableNewArray();
       break;
     default:
       return;
