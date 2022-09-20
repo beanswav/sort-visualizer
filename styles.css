@@ -16,10 +16,15 @@ body {
   font-weight: bolder;
 }
 
+.container {
+  display: flex;
+  height: 100vh;
+}
+
 .data-container {
   width: 75vw;
   height: 100vh;
-  margin-left: 200px;
+  margin-left: 16vw;
   align-items: flex-end;
   display: flex;
   position: absolute;
@@ -30,7 +35,9 @@ body {
   font-family: sans-serif;
   font-weight: 700;
   display: flex;
-  flex: 1;
+  flex: 1 1 0%;
+  transition: all 300mx ease-in-out 0s;
+  border-radius: 10px 10px 0px 0px;
   justify-content: center;
   align-items: center;
 }
@@ -47,7 +54,7 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 300px;
+  width: 25vw;
   position: fixed;
   z-index: 1;
   top: 0;
