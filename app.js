@@ -122,24 +122,6 @@ function generateArr(size) {
     const numWidth = Math.floor(document.body.clientWidth / (size * 3));
     const width = `${numWidth}px`;
 
-    const numMargin =
-      size < 5
-        ? 8
-        : size < 8
-        ? 6
-        : size < 11
-        ? 4
-        : size < 20
-        ? 3
-        : size < 50
-        ? 2.5
-        : size < 100
-        ? 1.5
-        : size < 130
-        ? 1
-        : 0.5;
-    const margin = `${numMargin}px`;
-
     const value = Math.floor(Math.random(size - 1) * 200) + 1;
 
     const bar = document.createElement("div");
@@ -148,7 +130,6 @@ function generateArr(size) {
 
     bar.style.height = `${value * 4}px`;
     bar.style.width = width;
-    bar.style.margin = margin;
 
     container.appendChild(bar);
   }

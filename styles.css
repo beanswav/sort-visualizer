@@ -1,8 +1,7 @@
 body {
-  background-color: white;
+  background-color: #645440;
   color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Bungee Spice", cursive;
   height: 100%;
   overflow: hidden;
 }
@@ -31,7 +30,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #312420;
   overflow-x: hidden;
   padding-top: 60px;
 }
@@ -47,7 +46,7 @@ body {
 }
 
 .bar {
-  background-color: rgb(0, 183, 255);
+  background-color: #c8161e;
   font-family: sans-serif;
   font-weight: 700;
   display: flex;
@@ -56,6 +55,8 @@ body {
   border-radius: 10px 10px 0px 0px;
   justify-content: center;
   align-items: center;
+  margin: 1px;
+  border: 1px solid #efe1bd;
 }
 
 .wrapper {
@@ -66,24 +67,15 @@ body {
   margin-top: 8vh;
 }
 
-.button1 {
-  padding: 12px;
-  font-weight: bolder;
-  background-color: grey;
-  border-radius: 10px;
-  color: white;
-  font-size: 16px;
-  border: white;
-}
-
 .newArray {
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   font-size: 15px;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  background-color: #efe1bd;
 }
 
 .form-select {
@@ -91,16 +83,19 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   width: 90%;
+  border-radius: 5px;
+  background-color: #efe1bd;
 }
 
 .startSort {
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   font-size: 15px;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  background-color: #efe1bd;
 }
 
 .bottomWrapper {
